@@ -3,6 +3,7 @@ import * as C from './styles'
 import {Item} from '../../Types/item'
 
 type Props = {
+    
     onAdd:(item:Item)=> void
 
 }
