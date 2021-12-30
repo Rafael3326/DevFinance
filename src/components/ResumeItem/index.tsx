@@ -6,6 +6,7 @@ type Props = {
     title:string;
     value: number;
     color?:string;
+    
 }
 
 
