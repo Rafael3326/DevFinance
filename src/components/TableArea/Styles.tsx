@@ -10,8 +10,12 @@ border-radius: 10px;
 margin-top: 20px;
 `;
 
-export const TableHeadColumn = styled.th<{ width?:number}>`
+export const TableHeadColumn = styled.th<{ width?:number,response?:boolean}>`
 padding: 10px 0;
 text-align: left;
 width: ${props=> props.width?`${props.width}px`: 'auto'};
+ @media( max-width:450px){
+    display: ${props=> props.response? 'none':'table-cell'};
+    
+ }
 `;

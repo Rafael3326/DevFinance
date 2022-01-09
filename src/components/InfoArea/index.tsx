@@ -34,8 +34,8 @@ export const InfoArea = ({currentMonth,onMonthChange,income,expense}:Props) =>{
                     <C.MonthArrow onClick={handleNextMonth}>➡️</C.MonthArrow>
             </C.MonthArea>
             <C.ResumeArea>
-                <ResumeItem title="Receitas" value={income}/>
-                <ResumeItem title="Despesas"  value={expense} />
+                <ResumeItem response={true}  title="Receitas" value={income}/>
+                <ResumeItem response={true} title="Despesas"  value={expense} />
                 <ResumeItem title="Balanços"   value={income-expense} color={(income-expense)<0? 'red': 'green'}/>
 
             </C.ResumeArea>

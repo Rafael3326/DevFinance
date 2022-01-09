@@ -10,6 +10,11 @@ export const Container = styled.div`
  margin-top: -40px;
  display: flex;
  align-items: center;
+
+ @media( max-width:1000px){
+
+    font-size: 14px;
+ }
 `;
 
 export const MonthArea = styled.div`
@@ -22,14 +27,24 @@ width:40px;
 text-align: center;
 font-size: 25px;
 cursor: pointer;
+@media( max-width:700px){
+
+width: 15px;
+font-size: 14px;
+}
 `;
 export const ResumeArea = styled.div`
 flex:2;
 display: flex;
+
 `;
 export const MonthTitle= styled.div`
 flex: 1;
 text-align: center;
+@media( max-width:700px){
+
+font-size: 14px;
+}
 
 `;
 

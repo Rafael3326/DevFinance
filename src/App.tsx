@@ -72,7 +72,11 @@ function App() {
         <InputArea onAdd={handleAddItem} />
 
         <TableArea list={filteredList}/>
-        
+         <C.InputRes>
+           <div>
+             Adicionar novo item 
+           </div>
+         </C.InputRes>
       </C.Body>
     </C.Container>
   )
