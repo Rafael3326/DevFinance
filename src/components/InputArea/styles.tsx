@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 
-export const Container = styled.div`
+export const Container = styled.div<{response:boolean}>`
 background-color:white;
 box-shadow: 0 0 5px #ccc;
 border-radius: 10px;
@@ -106,7 +106,55 @@ display: flex;
      
     }
     @media( max-width:700px){
-      display: none;
+      display: ${props=>props.response? 'flex':'none'};
+      flex-direction: column;
+      justify-content: center;
+      
+
+      label{
+      margin-left: 20px;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+      }
+
+
+      select{
+
+        width: 110px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-top: 10px;
+       
+      }
+      .inputPrice{
+        
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 20px;
+
+      }
+    .description{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 18px;
+
+  }
+
+  button {
+     font-size: 20px;
+     border-radius: 8px;
+     outline: 0;
+     margin-left: 30px;
+     height: 40px;
+   }  
     }
     
 `;

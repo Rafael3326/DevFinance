@@ -10,6 +10,7 @@ import { TableArea } from './components/TableArea';
 import { InfoArea } from './components/InfoArea';
 import { InputArea } from './components/InputArea';
 
+
 function App() {
 
   const[list,setList]=useState(Items)
@@ -17,6 +18,7 @@ function App() {
   const[currentMonth,setCurrentMonth]=useState(GetCurrentMonth())
   const[income,setIncome]=useState(0)
   const[expense,setExpense]=useState(0)
+  const[responsivo,setResponsivo]=useState<boolean>(false)
 
   useEffect(()=>{
 
@@ -55,6 +57,10 @@ function App() {
 
   }
 
+  const trocouResponsivo = () =>{
+    setResponsivo(!responsivo)
+  }
+
 
   return (
     <C.Container>
@@ -69,17 +75,18 @@ function App() {
         expense={expense}
         />
 
-        <InputArea onAdd={handleAddItem} />
+        <InputArea onAdd={handleAddItem} response={responsivo} trocar={trocouResponsivo}/>
 
-        <TableArea list={filteredList}/>
-         <C.InputRes>
-           <div>
+        <TableArea list={filteredList} response={responsivo}/>
+         <C.InputRes  response={responsivo}>
+           <div onClick={()=>setResponsivo(true)}>
              Adicionar novo item 
            </div>
          </C.InputRes>
       </C.Body>
-    </C.Container>
+    </C.Container>   
   )
+  
 }
 
 export default App;

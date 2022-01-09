@@ -8,9 +8,11 @@ import { ChangeEvent} from 'react'
 type Props = {
     
     onAdd:(item:Item)=> void
+    response:boolean
+    trocar: () => void
 
 }
-export const InputArea = ({onAdd}:Props) =>{
+export const InputArea = ({onAdd,response,trocar}:Props) =>{
 
     const[category,setCategory]=useState('')
     const[price,setPrice]=useState<number|string>('')
@@ -31,6 +33,8 @@ export const InputArea = ({onAdd}:Props) =>{
         if(category!=='' && price !==''){
             onAdd(NewItem)
         }
+
+        trocar()
 
     }
 
@@ -61,7 +65,7 @@ export const InputArea = ({onAdd}:Props) =>{
     }
      
  return(
-     <C.Container>
+     <C.Container response={response}>
          <button onClick={handleAddEvent} >Adicionar</button>
          <label> Categoria</label>
          <select onChange={select1}>

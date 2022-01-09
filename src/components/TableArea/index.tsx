@@ -5,12 +5,13 @@ import {TableItem} from '../TableItem'
 
 type Props ={
     list:Item[]
+    response:boolean
 }
 
-export const TableArea = ({list}:Props) =>{
+export const TableArea = ({list,response}:Props) =>{
 
     return (
-        <C.Table>
+        <C.Table responsivo={response}>
         
             <thead> 
                 <tr>

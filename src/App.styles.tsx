@@ -49,7 +49,7 @@ max-width: 340px;
 }
 `;
 
-export const InputRes = styled.div`
+export const InputRes = styled.div<{response:boolean}>`
   div{
       
       display:none;
@@ -63,7 +63,7 @@ export const InputRes = styled.div`
   @media(max-width:700px){
 
     div{
-        display: block;
+        display: ${props=>props.response?'none':'block'};
         font-size: 14px;
         background-color:blue;
         align-items: center;
@@ -74,6 +74,11 @@ export const InputRes = styled.div`
         border-radius: 10px;
         margin-top: 20px;
         padding: 10px;
+
+        a{
+          text-decoration:none;
+          color: white;
+        }
     }
   }
   @media(max-width:450px){
@@ -83,6 +88,11 @@ export const InputRes = styled.div`
       border-radius: 5px;
       padding: 5px;
       margin-left: 20px;
+
+      a{
+          text-decoration:none;
+          color: white;
+        }
    
       }
 
