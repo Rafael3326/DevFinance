@@ -1,3 +1,2 @@
-This is my project about finance, welcome to the Devfinance
+O Devfinance é um projeto de controle financeiro mensal, com receitas e despesas separadas por categorias 
 
-ass: Rafael Araújo Sales Júnior
